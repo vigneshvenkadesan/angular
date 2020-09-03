@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+       <div class="col-xs-12">
+
+        <button class="btn btn-primary"   (click)="onClick()" >View Text</button>
+        <p *ngIf="!value">Secret Password</p>
+        <div 
+        *ngFor="let logItem of log"
+        [ngStyle]="{backgroundColor: logItem >= 5 ?'green':'transaprent'}"
+        [ngClass]="{'white-text': logItem>=5}"
+        >{{logItem}}</div>
+
+
+       </div>
+
+    </div>
+</div>

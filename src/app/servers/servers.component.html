@@ -1,0 +1,38 @@
+<label>serverKey</label>
+<div class="container">
+    <div class="row">
+
+        <!-- Parallely typing and viewing text using $event
+        <input type="text"
+        class="form-control"
+        (input)="onUpdateServerKey($event)"> -->
+
+
+         <!-- By using ngModel we can initialize two way data binding -->
+        <input type="text"
+        class="form-control"     
+        [(ngModel)]="serverKey">
+
+        <br>
+
+        <!-- <p>{{serverKey}}</p> -->
+
+<!-- 
+        onclick event listener , using constructor enabling button after 2secs -->
+
+        <button class="btn btn-primary" [disabled]="!allowNewServer" 
+        (click)="onClick()">Add Server</button>
+<hr>
+
+        <!-- <p *ngIf="!serverStatus; else noServer">{{'Server'}} is running in the id {{serverId}} and status is {{serverName}}, {{serverStatus}} </p> -->
+        <p *ngIf="!serverStatus" >{{'Server'}} is running in the id {{serverId}} and status is {{serverName}}, {{serverStatus}} </p> 
+
+
+        <!-- <ng-template #noServer>
+                <p>No Server found</p>
+        </ng-template> -->
+<hr>
+<!-- when clicking button, the status will change -->
+        <p>{{serverCreationStatus}}</p>
+    </div>
+</div>

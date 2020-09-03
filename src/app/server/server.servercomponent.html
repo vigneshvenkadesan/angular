@@ -1,0 +1,18 @@
+
+<!-- add username using two way data binding and enable reset button only if string length >0 and null the username when 
+clicking reset button -->
+
+
+<label>Username</label>
+<div class="container">
+    <div class="row">
+        <input type="text"
+        class="form-control"
+        [(ngModel)]="username">
+        <p>{{username}}</p>
+
+        <br>
+        <button class='btn btn-primary' [disabled]="username == ''" (click)="username= ''">Reset</button>
+
+    </div>
+</div>
